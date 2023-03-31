@@ -1,0 +1,27 @@
+/*** Import all SASS files *****/
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    width: 349px;
+    height: 69px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  }
+}
+/*** Colors *****/
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+  body {
+    margin: 0px;
+  }
+  .img-background img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+/*** Import all SASS files *****/
+@import 'card';
+@import 'variables';
+@import 'mixins';
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+
+body {
+    margin: 0px;
+}
+.img-background {
+    width:100%;
+    img{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+}
+.restaurants {
+    @include flex-center;
+    gap: 10px;
+}
+}
