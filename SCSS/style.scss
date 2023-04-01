@@ -1,0 +1,122 @@
+/*** Import all SASS files *****/
+@import 'button';
+@import 'card';
+@import 'variables';
+@import 'mixins';
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+
+}
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*** Header *****/
+
+header {
+    width: 100%;
+    @include flex-center;
+}
+
+.navbar {
+    @include flex-center;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0px 10px 5px -5px rgba(0,0,0,0.1);
+    position: relative;
+    .arrow {
+    position: absolute;
+    top: 30px; left: 25px;
+ }
+    .logo img {
+    height: 40px;
+    padding-top: 17px;
+    padding-bottom: 13px;
+}
+}
+/*** position *****/
+
+.location {
+    background-color: #EAEAEA;
+    @include flex-center;
+    .content {
+    @include flex-center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 15px;
+    }
+}
+/*** Reservation part  *****/
+
+.reservation {
+background-color: #F3F3F3;
+width: 100%;
+padding-top: 30px;
+padding-bottom: 40px;
+
+}
+
+.reservation-content {
+    @include flex-center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    gap: 25px;
+}
+.reservation h2{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0px;
+}
+
+.reservation p{
+    font-size: 18px;
+    margin: 0px;
+}
+
+/*** Functions *****/
+
+.function {
+    @include flex-center;
+    flex-direction: column;
+}
+
+.function-cards {
+    @include flex-center;
+    flex-direction: column;
+    gap: 15px;
+}
+.function-title {
+    padding-right: 200px;
+}
+
+
+/*** Menus *****/
+
+.img-background {
+    width:100%;
+    img{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+}
+.restaurants {
+    @include flex-center;
+    gap: 10px;
+}
+}

@@ -6,38 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ohmyfood</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link href="assets/fonts/css/fontawesome.css" rel="stylesheet">
     <link href="assets/fonts/css/brands.css" rel="stylesheet">
     <link href="assets/fonts/css/solid.css" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-      <div class="nav">
-        <img src="assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/>
-    </div>
-    </header>
+    <section class="navbar">
+      <div class="logo">
+      <img src="assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/>
+      </div>
+    </section>
+</header>
 
     <main-container>
-        <article class="location"><i class="fa-solid fa-location-dot"></i> Paris, Belleville</article>
+
+        <section class="location">
+          <article class="content"><i class="fa-solid fa-location-dot"></i><p> Paris, Belleville</p></article>
+        </section>
 
         <section class="reservation">
-          <h2>Réservez le menu qui vous covient</h2>
-          <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+          <section class="reservation-content">
+          <h2>Réservez le menu qui vous convient</h2>
+          <p>Découvrez des restaurants d’exception, sélectionnés par n&os soins.</p>
 
-          <button class="button">Explorer nos restaurants</button>   
+          <button class="btn btn__reservation">Explorer nos restaurants</button>
+        </section>   
         </section>
 
         <section class="function">
-          <article class="card function"><i class="fa-solid fa-mobile-screen-button"></i>  <p>Choisissez un restaurant</p></article>
-          <article class="card function"><i class="fa-solid fa-list-ul"></i> <p>Composez votre menu</p></article>
-          <article class="card function"><i class="fa-solid fa-store"></i> <p>Dégustez au restaurant</p></article>
+            <div class="function-title"><h2>Fonctionnement</h2></div>
+
+        <section class="function-cards">
+            <article class="card card__function"><i class="fa-solid fa-mobile-screen-button"></i>  <p>Choisissez un restaurant</p></article>
+            <article class="card card__function"><i class="fa-solid fa-list-ul"></i> <p>Composez votre menu</p></article>
+            <article class="card card__function"><i class="fa-solid fa-store"></i> <p>Dégustez au restaurant</p></article>
+        </section>
         </section>
 
         <section class="restaurants">
-          
+           
           <a href="menus/menu-la-palette-du-gout.html">
-            <article class="card restaurant ">
+            <article class="card">
            <div class="img-background"><img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image d'un plat gastronomique"></div>
             <div class="new"><p>Nouveau<p></div>
             <article class="restaurants-content">
