@@ -19,15 +19,14 @@
 @media (max-width: 768px) {
   .card {
     display: flex;
-    justify-content: baseline;
     align-items: center;
     margin: auto;
     background-color: white;
     border-radius: 20px;
     padding: 4px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
-  .cad__dish {
+  .card__dish {
+    border-radius: 15px;
     width: 349px;
     height: 69px;
   }
@@ -37,10 +36,31 @@
     gap: 25px;
     padding-left: 30px;
     background-color: #F6F6F6;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
   .card__restaurant {
     width: 340px;
     height: 251px;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .card__restaurant .restaurants-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 25%;
+  }
+  .card__restaurant .restaurants-content .card-txt .card-title {
+    margin-bottom: 4px;
+  }
+  .card__restaurant .restaurants-content .card-txt .card-subtitle {
+    margin-top: 4px;
+  }
+  .card__restaurant img {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 75%;
   }
 }
 /*** Colors *****/
@@ -51,11 +71,16 @@
     font-family: "Roboto", sans-serif;
   }
   a {
+    color: inherit;
     text-decoration: none;
   }
   .main-container {
     display: flex;
     justify-content: space-between;
+  }
+  img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   /*** Header *****/
   header {
@@ -102,8 +127,8 @@
   .reservation {
     background-color: #F3F3F3;
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
   .reservation-content {
     display: flex;
@@ -131,6 +156,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
     flex-direction: column;
   }
   .function-cards {
@@ -141,6 +168,20 @@
     gap: 15px;
   }
   .function-title {
+    padding-right: 200px;
+  }
+  /*** Restaurants *****/
+  .restaurants {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    background-color: #F3F3F3;
+    gap: 15px;
+  }
+  .restaurants-title {
     padding-right: 200px;
   }
   /*** Menus *****/
