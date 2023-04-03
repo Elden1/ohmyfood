@@ -4,40 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>La Palette</title>
+    <title>A la française</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="../assets/fonts/css/fontawesome.css" rel="stylesheet">
     <link href="../assets/fonts/css/brands.css" rel="stylesheet">
     <link href="../assets/fonts/css/solid.css" rel="stylesheet">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
     <body>
         <header>
-            <div class="nav">
+            <div class="navbar">
+                <div class="arrow">
                 <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-                <a href="../index.html"><img src="../assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/></a>
-            </div>
+              </div>
+                <div class="logo">
+                  <img src="../assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/>
+                  </div>
         </header>
-        
+
         <main-container>
+
+          <section class="restaurant-menu">
+
+            <section class="restaurant-designation">
             <div class="img-background"><img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image de plat gastronomique"/></div>
-
-          <section class="menu">
-
-            <div class="restaurant name"><h1>À la française</h1>
-              <i class="fa-thin fa-heart"></i>
-            </div>
+            <div class="restaurant-name"><h1>À la française</h1><i class="fa-regular fa-heart"></i></div></section>
 
             <section class="menu-items">
 
-              <article class ="starters">
+              <article class ="list">
 
-                <div class="item txt"><p>ENTREES</p></div>
+                <div class="items-txt"><p>ENTREES</p></div>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                  
+                <article class ="card-dish-content">
+                  <div class="card-txt"></div>
                   <h3>Tartare de poulpe acidulé</h3>
                   <p>Aux zestes d'orange</p>
+                </div>
                 </article>
                 <article class="price">
                   <p>25 &euro;</p>
@@ -45,8 +49,8 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
                 </article>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                <article class ="card-dish-content">
                   <h3>Velouté de légumes d'antan</h3>
                   <p>Carotte, panais, topinambour</p>
                 </article>
@@ -56,7 +60,7 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
               </article>
 
-                <article class="card dish">
+                <article class="card card-dish">
                 <article class ="content">
                   <h3>Soupe à l'oignon</h3>
                   <p>Revisitée</p>
@@ -69,11 +73,11 @@
 
               </article>
 
-              <article class ="main courses">
+              <article class ="list">
 
-                <div class="items txt"><p>PLATS</p></div>
+                <div class="items-txt"><p>PLATS</p></div>
 
-                <article class="card dish">
+                <article class="card card-dish">
                 <article class ="content">
                   <h3>Coquilles Saint-Jacques</h3>
                   <p>Accompagnées d'une purée de panais</p>
@@ -84,7 +88,7 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
               </article>
 
-                <article class="card dish">
+                <article class="card card-dish">
                 <article class ="content">
                   <h3>Magret de canard</h3>
                   <p>Et parmentier de pommes de terre</p>
@@ -95,7 +99,7 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
               </article>
 
-                <article class="card dish">
+                <article class="card card-dish">
                 <article class ="content">
                   <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                   <p>Sur son lit de gnocchis aux légumes</p>
@@ -108,11 +112,11 @@
 
               </article>
                 
-                <article class ="desserts">
+                <article class ="list">
 
-                  <div class="items txt"><p>DESSERTS</p></div>
+                  <div class="items-txt"><p>DESSERTS</p></div>
   
-                  <article class="card dish">
+                  <article class="card card-dish">
                   <article class ="content">
                     <h3>Pétales de violettes glacés</h3>
                     <p>Et purée de noisettes</p>
@@ -123,7 +127,7 @@
                   <span class="check"><i class="fa-solid fa-check"></i></span>
                 </article>
                   
-                  <article class="card dish">
+                  <article class="card card-dish">
                   <article class ="content">
                     <h3>Fondant au chocolat</h3>
                     <p>Revisité</p>
@@ -134,7 +138,7 @@
                   <span class="check"><i class="fa-solid fa-check"></i></span>
                 </article>
   
-                  <article class="card dish">
+                  <article class="card card-dish">
                   <article class ="content">
                     <h3>Millefeuille croustillant</h3>
                     <p>Myrtilles et pâte d’amande</p>
@@ -153,18 +157,17 @@
             </section>
 
             <footer>
+
               <div class="logo">
-                <img src="assets/images/logo" alt="logo de ohmyfood"/>
+                <img src="../assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/>
               </div>
     
-              <div class="footer links">
-                  <article class="list">
+                  <article class="footer_links">
                       <a href="#"><i class="fa-solid fa-utensils"></i> <span class="bold">Proposer un restaurant</span></a>
                       <a href="#"><i class="fa-solid fa-handshake-angle"></i><span class="bold">Devenir partenaire</span></a>
                       <a href="#">Mentions légales</a>
                       <a href="#">Contact</a>
                   </article>
-                </div>
             </footer>
         </main-container>
       </body>

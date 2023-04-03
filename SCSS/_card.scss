@@ -1,17 +1,47 @@
 @media (max-width: 768px) {
+/*** base card *****/
 .card {
     display:flex;
     align-items: center;
     margin: auto;
     background-color: white;
     border-radius: 20px;
+    width: 90%;
     padding: 4px;
     }
-    .card__dish {
+
+    /*** card for the restaurants menus *****/
+
+    .card-dish {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         border-radius: 15px;
         width: 349px;
         height: 69px;
+        padding-right: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        .price p{
+            margin-bottom: -20px;
+        }
+        .card-dish-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-direction: column;
+            padding-left: 15px;
+            gap: 5px;
+
+            h3, p{
+                margin: 0px 0px;
+            }
+        }
+        .check{
+            display: none;
+        }
     }
+
+    /*** card for the index functions explanations *****/
     .card__function {
         width: 320px;
         height: 70px;
@@ -20,6 +50,8 @@
         background-color: #F6F6F6;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
+
+    /*** card for index restaurants selection *****/
     .card__restaurant {
         width: 340px;
         height: 251px;
