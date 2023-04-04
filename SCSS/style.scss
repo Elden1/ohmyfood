@@ -4,7 +4,9 @@
 @import 'variables';
 @import 'mixins';
 
+@media (max-width: 768px) {
 
+}
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
 
@@ -26,6 +28,44 @@ img {
     object-fit: cover;
 }
 
+.fa-heart{
+    -webkit-text-stroke: 1px black; /* width and color */
+    font-family: sans; 
+    color:white;
+}
+/*** Control of the color of the Heart font on click *****/
+
+#heartControl1, #heartControl2, #heartControl3, #heartControl4{
+    display: none;
+}
+#heartControl1:checked + label {
+    .fa-heart{
+        transition: 1s;
+        color:rgba(147,86,220,1) ;
+    }
+}
+#heartControl2:checked + label {
+    .fa-heart{
+        transition: 1s;
+        color:rgba(147,86,220,1) ;
+    }
+}
+#heartControl3:checked + label {
+    .fa-heart{
+        transition: 1s;
+        color:rgba(147,86,220,1) ;
+    }
+}
+#heartControl4:checked + label {
+    .fa-heart{
+        transition: 1s;
+        color:rgba(147,86,220,1) ;
+    }
+}
+
+.fa-store{
+    color: rgba(147,86,220,1);
+}
 /*** Header *****/
 header {
     width: 100%;
@@ -137,7 +177,7 @@ width: 100%;
     @include flex-center;
     flex-direction: column;
     background-color: $color-secondary;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     .restaurant-designation{
         padding-bottom: 10px;
         .restaurant-name{
@@ -152,6 +192,9 @@ width: 100%;
             z-index: 1;
             position: relative;
             border-radius: 26px;
+            .fa-heart{
+                color:$color-secondary;
+            }
             h1{
              font-family: 'Shrikhand', cursive;
              font-style: italic;

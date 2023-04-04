@@ -11,37 +11,34 @@
     <link href="../assets/fonts/css/solid.css" rel="stylesheet">
   </head>
     <body>
-      
-        <header>
-            <section class="navbar">
-
-              <div class="arrow">
-                <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+      <header>
+        <div class="navbar">
+            <div class="arrow">
+            <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+          </div>
+            <div class="logo">
+              <img src="../assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/>
               </div>
-
-              <div class="logo">
-                <a href="../index.html"><img src="../assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/></a>
-              </div>
-            </section>
-        </header>
+          </div>
+    </header>
         
         <main-container>
-          <div class="img-background"><img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image de plat gastronomique"/></div>
+          <section class="restaurant-menu">
 
-          <section class="menu">
-
-            <div class="restaurant name"><h1>La Palette du goût </h1>
-              <i class="fa-thin fa-heart"></i>
-              </div>
+            <section class="restaurant-designation">
+            <div class="img-background"><img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image de plat gastronomique"/></div>
+            <div class="restaurant-name"><h1>La palette du goût</h1>                
+              <input type="checkbox" id="heartControl1"/>
+              <label class="heart" for="heartControl1"><i class="fa-regular fa-heart grey"></i></label></div></section>
 
             <section class="menu-items">
 
-              <article class ="starters">
+              <article class ="list">
 
-                <div class="items txt"><p>ENTREES</p></div>
+                <div class="items-txt"><p>ENTREES</p></div>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                <article class ="card-dish-content">
                   <h3>Fricassée d'escargots</h3>
                   <p>Au piment d'Espelette </p>
                 </article>
@@ -51,8 +48,8 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
               </article>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                <article class ="card-dish-content">
                   <h3>Foie gras de canard mi-cuit</h3>
                   <p>Et ses copeaux de truffe noire</p>
                 </article>
@@ -62,8 +59,8 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
               </article>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                <article class ="card-dish-content">
                   <h3>Œuf au plat</h3>
                   <p>Assaisonné à la truffe sur lit de caviar</p>
                 </article>
@@ -75,12 +72,12 @@
                 
               </article>
 
-              <article class ="main courses">
+              <article class ="list">
 
-                <div class="items txt"><p>PLATS</p></div>
+                <div class="items-txt"><p>PLATS</p></div>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                <article class ="card-dish-content">
                   <h3>Filet de bœuf aux herbes</h3>
                   <p>Accompagné de sa ribambelle de légumes</p>
                 </article>
@@ -90,8 +87,8 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
               </article>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                <article class ="card-dish-content">
                   <h3>Parmentier de queue de bœuf</h3>
                   <p>À la truffe noire sur sa purée de panais</p>
                 </article>
@@ -101,8 +98,8 @@
                 <span class="check"><i class="fa-solid fa-check"></i></span>
               </article>
 
-                <article class="card dish">
-                <article class ="content">
+                <article class="card card-dish">
+                <article class ="card-dish-content">
                   <h3>Filet de turbot</h3>
                   <p>Aux agrumes</p>
                 </article>
@@ -114,12 +111,12 @@
 
               </article>
                 
-                <article class ="desserts">
+              <article class ="list">
 
-                  <div class="items txt"><p>DESSERTS</p></div>
+                  <div class="items-txt"><p>DESSERTS</p></div>
   
-                  <article class="card dish">
-                  <article class ="content">
+                  <article class="card card-dish">
+                  <article class ="card-dish-content">
                     <h3>Paris-Brest</h3>
                     <p>Revisité</p>
                   </article>
@@ -129,8 +126,8 @@
                   <span class="check"><i class="fa-solid fa-check"></i></span>
                 </article>
   
-                  <article class="card dish">
-                  <article class ="content">
+                  <article class="card card-dish">
+                  <article class ="card-dish-content">
                     <h3>Macaron au chocolat d'exception </h3>
                     <p>Et glace à la vanille de Madagascar</p>
                   </article>
@@ -140,8 +137,8 @@
                   <span class="check"><i class="fa-solid fa-check"></i></span>
                   </article>
 
-                  <article class="card dish">
-                  <article class ="content">
+                  <article class="card card-dish">
+                  <article class ="card-dish-content">
                     <h3>Mousse au chocolat </h3>
                     <p>Au piment d'Espelette et à la truffe noire</p>
                   </article>
@@ -153,24 +150,22 @@
 
               </article>
 
-              </section>
-
-              <button class="button">Commander</button>   
+              <button class="btn btn-order">Commander</button>
+              </section> 
             </section>
 
             <footer>
+
               <div class="logo">
-                <img src="../assets/images/logo" alt="logo de ohmyfood"/>
+                <img src="../assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"/>
               </div>
     
-              <div class="footer links">
-                  <article class="list">
+                  <article class="footer_links">
                       <a href="#"><i class="fa-solid fa-utensils"></i> <span class="bold">Proposer un restaurant</span></a>
                       <a href="#"><i class="fa-solid fa-handshake-angle"></i><span class="bold">Devenir partenaire</span></a>
                       <a href="#">Mentions légales</a>
                       <a href="#">Contact</a>
                   </article>
-                </div>
             </footer>
         </main-container>
       </body>

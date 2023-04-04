@@ -43,24 +43,27 @@
             <div class="function-title"><h2>Fonctionnement</h2></div>
 
         <section class="function-cards">
-            <article class="card card__function"><i class="fa-solid fa-mobile-screen-button"></i>  <p>Choisissez un restaurant</p></article>
-            <article class="card card__function"><i class="fa-solid fa-list-ul"></i> <p>Composez votre menu</p></article>
-            <article class="card card__function"><i class="fa-solid fa-store"></i> <p>Dégustez au restaurant</p></article>
+            <article class="card card__function">
+              <div class="number"><i class="fa-solid fa-1"></i></div><i class="fa-solid fa-mobile-screen-button"></i>  <p>Choisissez un restaurant</p></article>
+            <article class="card card__function"><div class="number"><i class="fa-solid fa-2"></i></div><i class="fa-solid fa-list-ul"></i> <p>Composez votre menu</p></article>
+            <article class="card card__function"><div class="number"><i class="fa-solid fa-3"></i></div><i class="fa-solid fa-store"></i> <p>Dégustez au restaurant</p></article>
         </section>
         </section>
 
         <section class="restaurants">
           <div class="restaurants-title"><h2>Restaurants</h2></div>
-           
+    
           <a href="menus/menu-la-palette-du-gout.html">
             <article class="card card__restaurant">
             <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image d'un plat gastronomique">
+            <div class="new-menu"><p>Nouveau</p></div>
             <article class="restaurants-content">
                 <div class="card-txt">
                 <h4 class="card-title">La palette du goût</h4>
                 <p class="card-subtitle">Ménilmontant</p>
                 </div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                <input type="checkbox" id="heartControl1"/>
+                <label class="heart" for="heartControl1"><i class="fa-regular fa-heart"></i></label>
             </article>
           </article>
           </a>
@@ -69,12 +72,14 @@
           <a href="menus/menu-la-note-enchantee.html">
             <article class="card card__restaurant">
             <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="image d'un plat gastronomique">
+            <div class="new-menu"><p>Nouveau</p></div>
             <article class="restaurants-content">
                 <div class="card-txt">
                 <h4 class="card-title">La note enchantée</h4>
                 <p class="card-subtitle">Charonne</p>
                 </div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                <input type="checkbox" id="heartControl2"/>
+                <label class="heart" for="heartControl2"><i class="fa-regular fa-heart"></i></label>
             </article>
           </article>
           </a>
@@ -87,7 +92,8 @@
                 <h4 class="card-title">À la française</h4>
                 <p class="card-subtitle">Cité Rouge</p>
                 </div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                <input type="checkbox" id="heartControl3"/>
+                <label class="heart" for="heartControl3"><i class="fa-regular fa-heart"></i></label>
             </article>
           </article>
           </a>
@@ -100,7 +106,8 @@
                 <h4 class="card-title">Le délice des sens</h4>
                 <p class="card-subtitle">Folie-Méricourt</p>
                 </div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                <input type="checkbox" id="heartControl4"/>
+                <label class="heart" for="heartControl4"><i class="fa-regular fa-heart"></i></label>
             </article>
           </article>
           </a>

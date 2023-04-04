@@ -39,6 +39,9 @@
         .check{
             display: none;
         }
+        #dishCheck:checked + label{
+            display: block;
+        }
     }
 
     /*** card for the index functions explanations *****/
@@ -49,6 +52,17 @@
         padding-left: 30px;
         background-color: #F6F6F6;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        .number{
+            position: absolute;
+            left: 20px;
+            border-radius: 50%;
+            text-align: center;
+            width: 18px;
+            height: 17px;
+            padding: 5px;
+            background-color: #9356DC;
+            color: white;
+        }
     }
 
     /*** card for index restaurants selection *****/
@@ -57,6 +71,21 @@
         height: 251px;
         flex-direction: column;
         padding: 0px;
+        .new-menu{
+            position: absolute;
+            margin-top: 25px;
+            right: 50px;
+            width: 80px;
+            height: 29px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 29px;
+            background-color: #99E2D0;
+            color: #008766;
+            p{
+                margin: 0px;
+            }
+        }
         .restaurants-content {
             display: flex;
             justify-content: space-between;

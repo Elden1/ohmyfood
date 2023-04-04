@@ -1,16 +1,23 @@
-/*** Import all SASS files *****/
+/*** Import all SASS files *****/ /*** Base for all buttons *****/
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  transition-duration: 0.5s;
+  background-image: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: none;
   color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
 }
 
+/*** Order button ******/
+.btn-order {
+  width: 186px;
+  height: 50px;
+}
+
+/*** reservation button *****/
 .btn__reservation {
   width: 218px;
   height: 50px;
@@ -55,6 +62,9 @@
   .card-dish .check {
     display: none;
   }
+  .card-dish #dishCheck:checked + label {
+    display: block;
+  }
   /*** card for the index functions explanations *****/
   .card__function {
     width: 320px;
@@ -64,12 +74,38 @@
     background-color: #F6F6F6;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
+  .card__function .number {
+    position: absolute;
+    left: 20px;
+    border-radius: 50%;
+    text-align: center;
+    width: 18px;
+    height: 17px;
+    padding: 5px;
+    background-color: #9356DC;
+    color: white;
+  }
   /*** card for index restaurants selection *****/
   .card__restaurant {
     width: 340px;
     height: 251px;
     flex-direction: column;
     padding: 0px;
+  }
+  .card__restaurant .new-menu {
+    position: absolute;
+    margin-top: 25px;
+    right: 50px;
+    width: 80px;
+    height: 29px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 29px;
+    background-color: #99E2D0;
+    color: #008766;
+  }
+  .card__restaurant .new-menu p {
+    margin: 0px;
   }
   .card__restaurant .restaurants-content {
     display: flex;
@@ -109,6 +145,34 @@
   img {
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .fa-heart {
+    -webkit-text-stroke: 1px black; /* width and color */
+    font-family: sans;
+    color: white;
+  }
+  /*** Control of the color of the Heart font on click *****/
+  #heartControl1, #heartControl2, #heartControl3, #heartControl4 {
+    display: none;
+  }
+  #heartControl1:checked + label .fa-heart {
+    transition: 1s;
+    color: rgb(147, 86, 220);
+  }
+  #heartControl2:checked + label .fa-heart {
+    transition: 1s;
+    color: rgb(147, 86, 220);
+  }
+  #heartControl3:checked + label .fa-heart {
+    transition: 1s;
+    color: rgb(147, 86, 220);
+  }
+  #heartControl4:checked + label .fa-heart {
+    transition: 1s;
+    color: rgb(147, 86, 220);
+  }
+  .fa-store {
+    color: rgb(147, 86, 220);
   }
   /*** Header *****/
   header {
@@ -229,7 +293,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: #F3F3F3;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   .restaurant-menu .restaurant-designation {
     padding-bottom: 10px;
@@ -246,6 +310,9 @@
     z-index: 1;
     position: relative;
     border-radius: 26px;
+  }
+  .restaurant-menu .restaurant-designation .restaurant-name .fa-heart {
+    color: #F3F3F3;
   }
   .restaurant-menu .restaurant-designation .restaurant-name h1 {
     font-family: "Shrikhand", cursive;
