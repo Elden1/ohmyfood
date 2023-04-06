@@ -4,22 +4,19 @@
 @import 'variables';
 @import 'mixins';
 
-@media (max-width: 768px) {
-
-}
-/* Small devices (phones, less than 768px) */
-@media (max-width: 768px) {
-
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
+
 a {
     color: inherit;
     text-decoration: none;
+    width: 100%;
 }
 
 .main-container {
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
 }
@@ -27,45 +24,14 @@ a {
 img {
     object-fit: cover;
 }
-
+ 
 .fa-heart{
     -webkit-text-stroke: 1px black; /* width and color */
     font-family: sans; 
     color:white;
 }
-/*** Control of the color of the Heart font on click *****/
 
-#heartControl1, #heartControl2, #heartControl3, #heartControl4{
-    display: none;
-}
-#heartControl1:checked + label {
-    .fa-heart{
-        transition: 1s;
-        color:rgba(147,86,220,1) ;
-    }
-}
-#heartControl2:checked + label {
-    .fa-heart{
-        transition: 1s;
-        color:rgba(147,86,220,1) ;
-    }
-}
-#heartControl3:checked + label {
-    .fa-heart{
-        transition: 1s;
-        color:rgba(147,86,220,1) ;
-    }
-}
-#heartControl4:checked + label {
-    .fa-heart{
-        transition: 1s;
-        color:rgba(147,86,220,1) ;
-    }
-}
 
-.fa-store{
-    color: rgba(147,86,220,1);
-}
 /*** Header *****/
 header {
     width: 100%;
@@ -137,15 +103,17 @@ width: 100%;
     @include flex-center;
     @include padding-top-bottom;
     flex-direction: column;
+    min-width: 100%;
 }
 
 .function-cards {
     @include flex-center;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
 }
 .function-title {
-    padding-right: 200px;
+    padding-right: 45%;
 }
 
 /*** Index Restaurants *****/
@@ -159,12 +127,17 @@ width: 100%;
 }
 }
 .restaurants {
+    width: 100%;
     @include flex-center;
     @include padding-top-bottom;
-    flex-direction: column;
     background-color: $color-secondary;
-    gap: 15px;
-    padding-bottom: 50px;
+    flex-direction: column;
+    .restaurants-selection{
+        width: 100%;
+        @include flex-center;
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 .restaurants-title {
@@ -176,22 +149,8 @@ width: 100%;
 .restaurant-menu {
     @include flex-center;
     flex-direction: column;
-    background-color: $color-secondary;
-    padding-bottom: 20px;
+    width: 100%;
     .restaurant-designation{
-        padding-bottom: 10px;
-        .restaurant-name{
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: $color-secondary;
-            margin: -60px auto auto auto;
-            padding-top: 15px;
-            height: 64px;
-            z-index: 1;
-            position: relative;
-            border-radius: 26px;
             .fa-heart{
                 color:$color-secondary;
             }
@@ -206,6 +165,17 @@ width: 100%;
             }
         }
     }
+    .restaurant-name{
+        width: 100%;;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $color-secondary;
+        margin: -60px auto auto auto;
+        padding-top: 15px;
+        height: 64px;
+        position: relative;
+        border-radius: 26px 26px 0px 0px;
 }
 
 /*** Restaurants menu lists *****/
@@ -213,11 +183,15 @@ width: 100%;
 .menu-items {
     @include flex-center;
     flex-direction: column;
+    background-color: $color-secondary;
+    width: 100%;
     gap: 15px;
+    padding-bottom: 15px;
     .list{
         @include flex-center;
         flex-direction: column;
         padding-bottom: 5px;
+        width: 80%;
         gap: 15px;
         .items-txt{
             padding-right: 85%;
@@ -238,9 +212,12 @@ footer {
     background-color: #353535;
     color: white;
     width: 100%;
-    height: 200px;
-    padding: 25px 0px 0px 20px ;
-    .logo {
+    padding: 25px 0px 25px 20px ;
+
+    .main-footer{
+        width: 100%;
+    }
+    .footer-logo {
         width: 140px;
         padding-bottom: 25px;
         img{
@@ -249,16 +226,88 @@ footer {
             filter: invert(1);
         }
     }
+    
 }
+
 .footer_links{
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
     gap: 10px;
     .bold{
+        width: 100%;
         font-weight: bold;
         padding-left: 5px;
     }
 }
 
+@media screen and (min-width: 768px)  {
+
+    /*** Reservation section *****/
+    .reservation-content {
+        flex-wrap: nowrap;
+        }
+
+    /*** Function section *****/
+    .function-title {
+        padding-right: 58%;
+    }
+
+    .function-cards {
+        flex-direction: row;
+        width: 65%;
+        gap: 5%;
+        padding: 15px;
+    }
+
+    /*** Restaurants section *****/
+    .restaurants{
+        .restaurants-title {
+            padding-right: 62%;
+        }
+        .restaurants-selection{
+            width: 80%;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+}
+    /*** Footer section *****/
+    a{
+        width: auto;
+    }
+        .main-footer{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 120px;
+            gap: 5%;
+    .footer-logo{
+        order: 2;
+        padding-bottom: 0px;
+        padding-right: 32px;
+    }
+    .footer_links{
+        order: 1;
+        flex-direction: row;
+    }
+}
+
+/*** Restaurant menus list ******/
+.menu-items{
+    width: 80%;
+    .list{
+    width: 80%;
+    }
+}
+
+.restaurant-name{
+    width: 80%!important;
+    }
+    .img-background img {
+        width: 1920px;
+        height: 500px;
+        background-size: contain;
+        background-position: center;
+    }
 }
