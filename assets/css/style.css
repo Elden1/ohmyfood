@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  background-image: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-image: linear-gradient(0deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
   border: none;
   color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -12,7 +12,7 @@
 }
 
 .btn:hover {
-  background-image: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%, #FFFFFF 200%);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) -11.44%, rgba(255, 121, 218, 0.9) 123.93%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
@@ -38,9 +38,16 @@
   width: 90%;
   padding: 4px;
 }
+.card img {
+  width: 100%;
+  height: 100%;
+}
 
 /*** card for the restaurants menus *****/
 .card-dish {
+  opacity: 0;
+  animation: fadeIn linear 2s;
+  animation-fill-mode: forwards;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,13 +56,24 @@
   height: 69px;
   padding-right: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  /**** animation for the fade in *****/
+  /**** rest of the card *****/
+  /*** Childrens for the fade in animations *****/
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .card-dish .price p {
   margin-bottom: -20px;
 }
 .card-dish .card-dish-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
   flex-direction: column;
   padding-left: 15px;
@@ -64,8 +82,30 @@
 .card-dish .card-dish-content h3, .card-dish .card-dish-content p {
   margin: 0px 0px;
 }
+.card-dish .dish-check {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
 .card-dish .check {
   display: none;
+}
+.card-dish .card-dish:hover .check {
+  display: block;
+}
+
+.card-dish:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.card-dish:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.card-dish:nth-child(4) {
+  animation-delay: 600ms;
 }
 
 /*** card for the index functions explanations *****/
@@ -89,8 +129,11 @@
   color: white;
   margin-right: -22px;
 }
+.card__function .fa-store {
+  color: #9356DC;
+}
 
-/*** card for index restaurants selection *****/
+/*** card for main page restaurants selection *****/
 .card__restaurant {
   height: 251px;
   flex-direction: column;
@@ -125,7 +168,17 @@
 .card__restaurant .restaurants-content .card-txt .card-subtitle {
   margin-top: 4px;
 }
-.card__restaurant img {
+.card__restaurant .restaurants-content .heart {
+  height: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) bottom, white;
+  transition: background-size 1s ease-in;
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+}
+.card__restaurant .restaurants-content .heart:hover {
+  background-size: 100% 100%;
+}
+.card__restaurant .border-round {
   border-radius: 20px 20px 0px 0px;
   width: 100%;
   height: 75%;
@@ -138,6 +191,8 @@
 }
 /*** Colors *****/
 /*** fonts *****/
+/*** Loading fade out animation *****/
+/*** general *****/
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
@@ -155,15 +210,16 @@ a {
   justify-content: space-between;
 }
 
+/* Trigger animation end */
+/*** end animation *****/
 img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .fa-heart {
-  -webkit-text-stroke: 1px black; /* width and color */
-  font-family: sans;
-  color: white;
+  color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 0px 0 white, 0px -1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000;
 }
 
 /*** Header *****/
@@ -308,30 +364,35 @@ header {
   flex-direction: column;
   width: 100%;
 }
-.restaurant-menu .restaurant-designation .fa-heart {
-  color: #F3F3F3;
-}
 .restaurant-menu .restaurant-designation h1 {
   font-family: "Shrikhand", cursive;
   font-style: italic;
   font-weight: 400;
   font-size: 38px;
 }
-.restaurant-menu .restaurant-designation .fa-heart {
-  font-size: 30px;
-}
 
 .restaurant-name {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 25px;
   background-color: #F3F3F3;
   margin: -60px auto auto auto;
   padding-top: 15px;
   height: 64px;
   position: relative;
   border-radius: 26px 26px 0px 0px;
+}
+.restaurant-name .heart-grading {
+  height: 21px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) bottom, #F3F3F3;
+  transition: background-size 0.5s ease-in;
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+}
+.restaurant-name .heart-grading:hover {
+  background-size: 100% 100%;
 }
 
 /*** Restaurants menu lists *****/

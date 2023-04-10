@@ -8,11 +8,18 @@
     border-radius: 20px;
     width: 90%;
     padding: 4px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
     }
 
     /*** card for the restaurants menus *****/
 
     .card-dish {
+        opacity: 0;
+        animation: fadeIn linear 2s;
+        animation-fill-mode: forwards;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,26 +28,62 @@
         height: 69px;
         padding-right: 15px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+        /**** animation for the fade in *****/
+        @keyframes fadeIn{
+            0%{
+                
+                opacity: 0;
+            }
+            100%{
+                opacity:1;
+            }
+        }
+        /**** rest of the card *****/
         .price p{
             margin-bottom: -20px;
         }
         .card-dish-content{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: baseline;
             flex-direction: column;
             padding-left: 15px;
             gap: 5px;
-
             h3, p{
                 margin: 0px 0px;
             }
         }
+        .dish-check{
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
         .check {
             display: none;
         }
-
+        .card-dish:hover{
+            .check{
+                display: block;
+            }
+        }
+        /*** Childrens for the fade in animations *****/
     }
+    .card-dish:nth-child(2){
+        animation-delay:200ms;
+    }
+    
+    .card-dish:nth-child(3){
+        animation-delay:400ms;
+    }
+
+    .card-dish:nth-child(4){
+        animation-delay:600ms;
+    }
+    
+    
     /*** card for the index functions explanations *****/
     .card__function {
         display: flex;
@@ -61,9 +104,12 @@
             color: white;
             margin-right: -22px;
         }
+        .fa-store{
+            color: #9356DC;
+        }
     }
 
-    /*** card for index restaurants selection *****/
+    /*** card for main page restaurants selection *****/
     .card__restaurant {
         height: 251px;
         flex-direction: column;
@@ -97,9 +143,19 @@
             .card-subtitle{
                 margin-top: 4px;
             }
-        }   
+        }  
+        .heart{
+            height: 25px;
+            background:  linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%)bottom, white;
+            transition: background-size 1s ease-in;
+            background-size: 100% 0%;
+            background-repeat:no-repeat;
         }
-        img {
+            .heart:hover{
+                background-size: 100% 100%;
+          }
+        }
+        .border-round {
         border-radius: 20px 20px 0px 0px;
         width: 100%;
         height: 75%;

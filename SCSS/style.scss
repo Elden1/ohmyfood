@@ -4,6 +4,10 @@
 @import 'variables';
 @import 'mixins';
 
+/*** Loading fade out animation *****/
+
+
+/*** general *****/
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
@@ -16,19 +20,24 @@ a {
 }
 
 .main-container {
+
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
 }
+
+  
+  /* Trigger animation end */
+
+/*** end animation *****/
 
 img {
     object-fit: cover;
 }
  
 .fa-heart{
-    -webkit-text-stroke: 1px black; /* width and color */
-    font-family: sans; 
-    color:white;
+    color:rgba(0,0,0,0);
+	text-shadow: 0px 0px 0 white, 0px -1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000
 }
 
 
@@ -151,35 +160,40 @@ width: 100%;
     flex-direction: column;
     width: 100%;
     .restaurant-designation{
-            .fa-heart{
-                color:$color-secondary;
-            }
             h1{
              font-family: 'Shrikhand', cursive;
              font-style: italic;
              font-weight: 400;
              font-size: 38px;
             }
-            .fa-heart {
-            font-size: 30px;
-            }
         }
     }
     .restaurant-name{
-        width: 100%;;
+        width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        gap: 25px;
         background-color: $color-secondary;
         margin: -60px auto auto auto;
         padding-top: 15px;
         height: 64px;
         position: relative;
         border-radius: 26px 26px 0px 0px;
+        .heart-grading {
+            height: 21px;
+            background:  linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%)bottom, $color-secondary;
+            transition: background-size 0.5s ease-in;
+            background-size: 100% 0%;
+            background-repeat:no-repeat;
+            }
+            .heart-grading:hover{
+                background-size: 100% 100%;
+            }      
 }
 
-/*** Restaurants menu lists *****/
 
+/*** Restaurants menu lists *****/
 .menu-items {
     @include flex-center;
     flex-direction: column;
@@ -205,9 +219,7 @@ width: 100%;
         }
     }
 }
-
 /*** Footer *****/
-
 footer {
     background-color: #353535;
     color: white;
