@@ -36,7 +36,6 @@
   background-color: white;
   border-radius: 20px;
   width: 90%;
-  padding: 4px;
 }
 .card img {
   width: 100%;
@@ -54,11 +53,11 @@
   border-radius: 15px;
   width: 100%;
   height: 69px;
-  padding-right: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in 0s;
   /**** animation for the fade in *****/
-  /**** rest of the card *****/
   /*** Childrens for the fade in animations *****/
+  /**** rest of the card *****/
 }
 @keyframes fadeIn {
   0% {
@@ -68,44 +67,94 @@
     opacity: 1;
   }
 }
+.card-dish .card-dish:nth-child(2) {
+  animation-delay: 200ms;
+}
+.card-dish .card-dish:nth-child(3) {
+  animation-delay: 400ms;
+}
+.card-dish .card-dish:nth-child(4) {
+  animation-delay: 600ms;
+}
 .card-dish .price p {
+  transition: 0.5s ease;
+  position: relative;
+  right: -70px;
   margin-bottom: -20px;
+  padding-right: 15px;
 }
 .card-dish .card-dish-content {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   flex-direction: column;
-  padding-left: 15px;
+  padding: 17px 0px 17px 15px;
   gap: 5px;
 }
 .card-dish .card-dish-content h3, .card-dish .card-dish-content p {
   margin: 0px 0px;
 }
 .card-dish .dish-check {
+  transition: 0.5s ease;
   width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
 }
+.card-dish .selection {
+  position: relative;
+}
+.card-dish .check-box {
+  transition: 0.5s ease;
+  right: -60px;
+}
 .card-dish .check {
-  display: none;
-}
-.card-dish .card-dish:hover .check {
+  overflow: hidden;
   display: block;
+  position: relative;
+  border-radius: 50%;
+  text-align: center;
+  width: 18px;
+  height: 17px;
+  padding: 5px;
+  background-color: white;
+  color: #99E2D0;
+}
+.card-dish .check-box {
+  position: relative;
+  right: -70px;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+}
+.card-dish .selection {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
 }
 
-.card-dish:nth-child(2) {
-  animation-delay: 200ms;
+/*** selection hover animation *****/
+.card-dish:hover .card-dish {
+  padding-right: 0px;
 }
-
-.card-dish:nth-child(3) {
-  animation-delay: 400ms;
+.card-dish:hover .check {
+  overflow: hidden;
 }
-
-.card-dish:nth-child(4) {
-  animation-delay: 600ms;
+.card-dish:hover .check-box {
+  overflow: hidden;
+  right: 0px;
+}
+.card-dish:hover .price p {
+  position: relative;
+  right: 0px;
 }
 
 /*** card for the index functions explanations *****/
