@@ -44,9 +44,6 @@
 
 /*** card for the restaurants menus *****/
 .card-dish {
-  opacity: 0;
-  animation: fadeIn linear 2s;
-  animation-fill-mode: forwards;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,8 +52,12 @@
   height: 69px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in 0s;
+  /*** animations dish cards for menus *****/
+  opacity: 0;
+  overflow: hidden;
+  animation: fadeIn linear 1s;
+  animation-fill-mode: forwards;
   /**** animation for the fade in *****/
-  /*** Childrens for the fade in animations *****/
   /**** rest of the card *****/
 }
 @keyframes fadeIn {
@@ -67,27 +68,17 @@
     opacity: 1;
   }
 }
-.card-dish .card-dish:nth-child(2) {
-  animation-delay: 200ms;
-}
-.card-dish .card-dish:nth-child(3) {
-  animation-delay: 400ms;
-}
-.card-dish .card-dish:nth-child(4) {
-  animation-delay: 600ms;
-}
 .card-dish .price p {
-  transition: 0.5s ease;
   position: relative;
-  right: -70px;
   margin-bottom: -20px;
-  padding-right: 15px;
 }
 .card-dish .card-dish-content {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   flex-direction: column;
+  white-space: nowrap;
+  width: 70%;
   padding: 17px 0px 17px 15px;
   gap: 5px;
 }
@@ -95,19 +86,13 @@
   margin: 0px 0px;
 }
 .card-dish .dish-check {
-  transition: 0.5s ease;
+  transition: 100ms ease;
+  visibility: hidden;
   width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-}
-.card-dish .selection {
-  position: relative;
-}
-.card-dish .check-box {
-  transition: 0.5s ease;
-  right: -60px;
 }
 .card-dish .check {
   overflow: hidden;
@@ -123,9 +108,9 @@
 }
 .card-dish .check-box {
   position: relative;
-  right: -70px;
+  transition: 0.5s ease;
   height: 100%;
-  width: 60px;
+  width: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,27 +118,55 @@
   border-radius: 0px 15px 15px 0px;
 }
 .card-dish .selection {
+  transition: all 400ms ease 0s;
+  position: relative;
   overflow: hidden;
+  width: 25%;
+  right: -15%;
+  white-space: nowrap;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 15px;
+  gap: 9px;
+}
+
+/*** Childrens for the fade in animations *****/
+.card-dish:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.card-dish:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.card-dish:nth-child(4) {
+  animation-delay: 600ms;
 }
 
 /*** selection hover animation *****/
 .card-dish:hover .card-dish {
   padding-right: 0px;
 }
+.card-dish:hover .content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 230px;
+}
 .card-dish:hover .check {
   overflow: hidden;
 }
 .card-dish:hover .check-box {
   overflow: hidden;
+  visibility: visible;
+  position: relative;
   right: 0px;
 }
 .card-dish:hover .price p {
   position: relative;
+  right: 0px;
+}
+.card-dish:hover .selection {
   right: 0px;
 }
 
@@ -178,7 +191,11 @@
   color: white;
   margin-right: -22px;
 }
-.card__function .fa-store {
+
+.card__function:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+.card__function:hover .fa-mobile-screen-button, .card__function:hover .fa-list-ul, .card__function:hover .fa-store {
   color: #9356DC;
 }
 
@@ -220,7 +237,8 @@
 .card__restaurant .restaurants-content .heart {
   height: 25px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) bottom, white;
-  transition: background-size 1s ease-in;
+  /*** change the color of the heart by replacing the grey by the linear color from the bottom *****/
+  transition: background-size 0.5s ease-in;
   background-size: 100% 0%;
   background-repeat: no-repeat;
 }
@@ -237,10 +255,51 @@
   .card__restaurant {
     width: 40%;
   }
+  .card-dish .selection {
+    justify-content: space-between;
+    width: 20%;
+    right: -10%;
+    gap: 12px;
+  }
+  .card-dish:hover .content {
+    width: 400px;
+  }
 }
 /*** Colors *****/
 /*** fonts *****/
-/*** Loading fade out animation *****/
+/*** Loader css *****/
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.loader .spinner {
+  width: 4rem;
+  height: 4rem;
+  border: 0.5rem solid #ccc;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  /*** animations for the spinner and fade-in of the main-container *****/
+  animation-name: spin, fade-out;
+  animation-direction: linear, ease-out;
+  animation-duration: 1s, 1s;
+  animation-delay: 0s, 2s;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*** general *****/
 body {
   margin: 0px;
@@ -254,13 +313,40 @@ a {
 }
 
 .main-container {
-  max-width: 1440px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
+  /*** fade-in animation *****/
+  opacity: 0;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-direction: ease-in;
+  animation-name: fade-in;
+  animation-duration: 3s;
+  animation-delay: 2s;
 }
 
-/* Trigger animation end */
-/*** end animation *****/
+/*** Keyframes for animations *****/
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/*** generals rules *****/
 img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -374,10 +460,10 @@ header {
 
 /*** Index Restaurants *****/
 .img-background {
-  width: 100%;
+  width: 100vw;
 }
 .img-background img {
-  width: 100%;
+  width: 100vw;
   background-size: cover;
   background-position: center;
 }
@@ -461,7 +547,7 @@ header {
   justify-content: center;
   flex-direction: column;
   padding-bottom: 5px;
-  width: 80%;
+  width: 90%;
   gap: 15px;
 }
 .menu-items .list .items-txt {
@@ -505,7 +591,7 @@ footer .footer-logo img {
   padding-left: 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /*** Reservation section *****/
   .reservation-content {
     flex-wrap: nowrap;
@@ -553,16 +639,16 @@ footer .footer-logo img {
   }
   /*** Restaurant menus list ******/
   .menu-items {
-    width: 80%;
+    width: 70%;
   }
   .menu-items .list {
-    width: 80%;
+    width: 60%;
   }
   .restaurant-name {
-    width: 80% !important;
+    width: 70% !important;
   }
   .img-background img {
-    width: 1920px;
+    width: 100vw;
     height: 500px;
     background-size: contain;
     background-position: center;
