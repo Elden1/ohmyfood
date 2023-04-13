@@ -65,6 +65,13 @@ a {
     animation-delay: 2s;
 }
 
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: auto;
+}
+
 
 /*** Keyframes for animations *****/
 @keyframes fade-out {
@@ -244,6 +251,7 @@ width: 100%;
 
 
 /*** Restaurants menu lists *****/
+
 .menu-items {
     @include flex-center;
     flex-direction: column;
@@ -305,7 +313,7 @@ footer {
 
 
 
-@media screen and (min-width: 769px)  {
+@media (min-width: 768px)  {
 
     /*** Reservation section *****/
     .reservation-content {
@@ -314,27 +322,31 @@ footer {
 
     /*** Function section *****/
     .function-title {
-        padding-right: 58%;
+        padding-right: 59%;
     }
 
     .function-cards {
         flex-direction: row;
-        width: 65%;
+        width: 89%;
         gap: 5%;
         padding: 15px;
     }
 
-    /*** Restaurants section *****/
+
+
+    /*** Index Restaurants section *****/
     .restaurants{
         .restaurants-title {
-            padding-right: 62%;
+            padding-right: 74%;
         }
+
         .restaurants-selection{
-            width: 80%;
             flex-direction: row;
             flex-wrap: wrap;
         }
-}
+
+    }
+
     /*** Footer section *****/
     a{
         width: auto;
@@ -358,7 +370,8 @@ footer {
     }
 }
 
-/*** Restaurant menus list ******/
+
+    /*** Individual Restaurants section *****/
 .menu-items{
     width: 70%;
     .list{
@@ -367,7 +380,7 @@ footer {
 }
 
 .restaurant-name{
-    width: 70%!important;
+    width: 86%!important;
     }
     .img-background img {
         width: 100vw;
@@ -375,4 +388,49 @@ footer {
         background-size: contain;
         background-position: center;
     }
+    .menu-items {
+        width: 86%;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    
+        /*** Reservation section *****/
+        .reservation-content {
+            flex-wrap: nowrap;
+            }
+    
+        /*** Function section *****/
+        .function-title {
+            padding-right: 74%;
+        }
+    
+        .function-cards {
+            flex-direction: row;
+            width: 89%;
+            gap: 5%;
+            padding: 15px;
+        }
+
+        /*** Index restaurant *****/
+
+        .restaurants{
+            .restaurants-title {
+                padding-right: 59%;
+            }
+            .restaurants-selection{
+                width: 75%;
+            }
+        }
+
+        /*** Individual Restaurants section *****/
+        .restaurant-name {
+            width: 70% !important;
+    
+        }
+    
+        .menu-items {
+            width: 70%;
+        }
 }

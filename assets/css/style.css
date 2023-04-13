@@ -251,6 +251,11 @@
   height: 75%;
 }
 
+@media (width: 375px) {
+  .card-dish {
+    font-size: 14px;
+  }
+}
 @media (min-width: 768px) {
   .card__restaurant {
     width: 40%;
@@ -261,6 +266,11 @@
     right: -10%;
     gap: 12px;
   }
+  .card-dish:hover .content {
+    width: 300px;
+  }
+}
+@media (min-width: 1024px) {
   .card-dish:hover .content {
     width: 400px;
   }
@@ -325,6 +335,13 @@ a {
   animation-name: fade-in;
   animation-duration: 3s;
   animation-delay: 2s;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
 }
 
 /*** Keyframes for animations *****/
@@ -591,27 +608,26 @@ footer .footer-logo img {
   padding-left: 5px;
 }
 
-@media screen and (min-width: 769px) {
+@media (min-width: 768px) {
   /*** Reservation section *****/
   .reservation-content {
     flex-wrap: nowrap;
   }
   /*** Function section *****/
   .function-title {
-    padding-right: 58%;
+    padding-right: 59%;
   }
   .function-cards {
     flex-direction: row;
-    width: 65%;
+    width: 89%;
     gap: 5%;
     padding: 15px;
   }
-  /*** Restaurants section *****/
+  /*** Index Restaurants section *****/
   .restaurants .restaurants-title {
-    padding-right: 62%;
+    padding-right: 74%;
   }
   .restaurants .restaurants-selection {
-    width: 80%;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -637,7 +653,7 @@ footer .footer-logo img {
     order: 1;
     flex-direction: row;
   }
-  /*** Restaurant menus list ******/
+  /*** Individual Restaurants section *****/
   .menu-items {
     width: 70%;
   }
@@ -645,12 +661,45 @@ footer .footer-logo img {
     width: 60%;
   }
   .restaurant-name {
-    width: 70% !important;
+    width: 86% !important;
   }
   .img-background img {
     width: 100vw;
     height: 500px;
     background-size: contain;
     background-position: center;
+  }
+  .menu-items {
+    width: 86%;
+  }
+}
+@media (min-width: 1024px) {
+  /*** Reservation section *****/
+  .reservation-content {
+    flex-wrap: nowrap;
+  }
+  /*** Function section *****/
+  .function-title {
+    padding-right: 74%;
+  }
+  .function-cards {
+    flex-direction: row;
+    width: 89%;
+    gap: 5%;
+    padding: 15px;
+  }
+  /*** Index restaurant *****/
+  .restaurants .restaurants-title {
+    padding-right: 59%;
+  }
+  .restaurants .restaurants-selection {
+    width: 75%;
+  }
+  /*** Individual Restaurants section *****/
+  .restaurant-name {
+    width: 70% !important;
+  }
+  .menu-items {
+    width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */

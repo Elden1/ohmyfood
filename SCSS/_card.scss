@@ -1,5 +1,6 @@
 
 /*** base card *****/
+
 .card {
     display:flex;
     align-items: center;
@@ -229,6 +230,12 @@
         }
     }
 
+    @media  (width: 375px){
+        .card-dish{
+            font-size: 14px;
+        }
+
+    }
     @media (min-width: 768px) {
         .card__restaurant{
             width: 40%;
@@ -244,8 +251,16 @@
         }
         .card-dish:hover{
             .content{
-                width: 400px;
+                width: 300px;
             }
 
         }
+    }
+
+    @media (min-width: 1024px){
+        .card-dish:hover{
+            .content{
+                width: 400px;
+            }
+    }
     }
