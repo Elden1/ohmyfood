@@ -121,14 +121,16 @@
   transition: all 400ms ease 0s;
   position: relative;
   overflow: hidden;
-  width: 25%;
-  right: -15%;
+  right: -56px;
   white-space: nowrap;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 9px;
+}
+.card-dish .content {
+  text-overflow: ellipsis;
 }
 
 /*** Childrens for the fade in animations *****/
@@ -147,11 +149,6 @@
 /*** selection hover animation *****/
 .card-dish:hover .card-dish {
   padding-right: 0px;
-}
-.card-dish:hover .content {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 230px;
 }
 .card-dish:hover .check {
   overflow: hidden;
@@ -251,9 +248,58 @@
   height: 75%;
 }
 
-@media (width: 375px) {
+@media screen and (max-width: 374px) and (min-width: 320px) {
+  .card-dish-content {
+    padding: 17px 0px 17px 2px !important;
+  }
+  .menu-items .list {
+    width: 95%;
+  }
   .card-dish {
     font-size: 14px;
+  }
+  .card-dish .card-dish-content .content {
+    width: 240px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .card-dish:hover .card-dish-content .content {
+    width: 190px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 430px) and (min-width: 375px) {
+  .card-dish .card-dish-content .content {
+    width: 294px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .card-dish:hover .card-dish-content {
+    width: 210px !important;
+  }
+  .card-dish:hover .card-dish-content .content {
+    width: 210px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .card-dish-content {
+    padding: 17px 0px 17px 9px !important;
+  }
+}
+@media screen and (max-width: 500px) and (min-width: 431px) {
+  .card-dish .card-dish-content .content {
+    width: 307px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .card-dish:hover .card-dish-content {
+    width: 272px !important;
+  }
+  .card-dish:hover .card-dish-content .content {
+    width: 272px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 @media (min-width: 768px) {
@@ -262,8 +308,7 @@
   }
   .card-dish .selection {
     justify-content: space-between;
-    width: 20%;
-    right: -10%;
+    right: -56px;
     gap: 12px;
   }
   .card-dish:hover .content {
